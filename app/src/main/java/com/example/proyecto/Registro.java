@@ -18,6 +18,7 @@ import com.example.proyecto.entities.Producto;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
+    // Definiendo objetos
     private EditText txtNombre, txtMarca, txtModelo, txtDescripcion, txtStock, txtPrecio, txtDescuento;
     private Button btnRegistrar;
     private Context context = this;

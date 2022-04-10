@@ -59,7 +59,7 @@ public class Busqueda extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
-        // Se hizo clic en el btnBuscar
+        // Se hizo clic en el buscar
         if(view.getId() == btnBuscar.getId()){
             searchProductById();
         }
@@ -69,7 +69,7 @@ public class Busqueda extends AppCompatActivity implements View.OnClickListener 
             validateDeletion();
         }
 
-        // Actualizar registro
+        // Se hizo clic en actualizar
         if(view.getId() == btnActualizar.getId()){
             validateUpdate();
         }
@@ -121,7 +121,7 @@ public class Busqueda extends AppCompatActivity implements View.OnClickListener 
      */
     private void validateDeletion(){
         if(activityHasNoContent()){
-            Toast.makeText(context, "No existen registro por eliminar", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "No se indico el registro a eliminar", Toast.LENGTH_LONG).show();
         }
         else{
             // Crear instancia del dialogo
@@ -140,7 +140,7 @@ public class Busqueda extends AppCompatActivity implements View.OnClickListener 
                     .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            // Por definir
+                            // No se hace nada
                         }
                     });
 
@@ -190,7 +190,7 @@ public class Busqueda extends AppCompatActivity implements View.OnClickListener 
 
     /**
      * Este método valida si existe datos en el activity Busqueda.
-     * Actualiza en caso exista datos de lo contrario Muestra un mensaje de aviso
+     * Actualiza en caso exista datos, de lo contrario Muestra un mensaje de aviso
      */
     private void validateUpdate(){
         if(activityHasNoContent()){
@@ -251,8 +251,6 @@ public class Busqueda extends AppCompatActivity implements View.OnClickListener 
         // Cerrar la conexión
         db.close();
     }
-
-    // Verifica si los editext tienen datos
 
     /**
      * Este método verifica si los EdiText del activity Busqueda contiene datos.

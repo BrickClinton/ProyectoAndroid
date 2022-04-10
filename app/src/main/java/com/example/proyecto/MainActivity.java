@@ -10,6 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    // Definiendo objetos
     private Button btnBusqueda, btnRegistrar, btnListar;
     private Context context = this;
 
